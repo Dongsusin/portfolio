@@ -1,0 +1,207 @@
+/* 전체 화면 사용 및 스크롤 제거 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  background-color: #f5f0e6;
+  font-family: "Georgia", serif;
+}
+
+.portfolio-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f0e6;
+}
+
+.book-container {
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.flip-book {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.page {
+  width: 100%;
+  height: 100%;
+  background: #fffdf7;
+  padding: 40px 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ddd2c2;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.page h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #4b3621;
+  border-bottom: 2px dashed #cdbda8;
+  padding-bottom: 10px;
+  margin-bottom: 24px;
+}
+
+.page p {
+  white-space: pre-line;
+  color: #5c5042;
+  line-height: 1.8;
+  font-size: 1.25rem;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.page-number {
+  text-align: center;
+  font-size: 1rem;
+  color: #b0a392;
+  padding-top: 12px;
+  border-top: 1px dashed #e0d8c7;
+}
+
+/* 넘기기 버튼 */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  background: #fff8e1;
+  border: 1px solid #e0d4bb;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 10px 15px;
+  z-index: 10;
+  transition: background 0.2s;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background: #fffdf4;
+}
+
+.nav-button.left {
+  left: 2%;
+}
+
+.nav-button.right {
+  right: 2%;
+}
+
+/* 모바일 터치 지원 */
+.flip-book {
+  touch-action: pan-y pinch-zoom;
+}
+
+.intro-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 180px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.info-text {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ===== 기술 스택 페이지 (2페이지) ===== */
+.skills-page {
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.skills-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 1rem;
+  background-color: #ffffffcc;
+  text-wrap: nowrap;
+}
+
+.skills-table th,
+.skills-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  text-align: left;
+}
+
+.skills-table th {
+  background-color: #f0eee6;
+  font-weight: bold;
+  color: #333;
+}
+
+.skills-table .tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.skills-table .tools img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.skills-table .tools img:hover {
+  transform: scale(1.1);
+}
+
+.project-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.project-item {
+  background: #fffaf2;
+  border-left: 6px solid #c8b198;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  max-height: 400px;
+}
+
+.project-item h3 {
+  margin-top: 0;
+  color: #4b3621;
+  font-size: 1.4rem;
+}
+
+.project-item p {
+  margin: 0.7rem 0;
+  color: #5c5042;
+  font-size: 1rem;
+}
