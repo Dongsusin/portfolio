@@ -8,6 +8,7 @@ const App = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState(null);
+  const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -17,7 +18,26 @@ const App = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    if (!showIntro && !isMobile) {
+      setTimeout(() => {
+        book.current?.pageFlip().flipNext();
+      }, 500);
+    }
+  }, [showIntro]);
+
   const pages = [
+    {
+      title: "",
+      content: (
+        <div className="intro-page-book">
+          <h1>포트폴리오</h1>
+          <button onClick={() => book.current?.pageFlip().flipNext()}>
+            시작하기
+          </button>
+        </div>
+      ),
+    },
     {
       title: "포트폴리오",
       content: (
@@ -871,64 +891,75 @@ const App = () => {
 
   return (
     <div className="portfolio-container">
-      <div className="book-container">
-        <button className="nav-button left" onClick={prevPage}>
-          ◀
-        </button>
+      {showIntro ? (
+        <div className="intro-screen">
+          <h1>포트폴리오</h1>
+          <button className="start-button" onClick={() => setShowIntro(false)}>
+            시작하기
+          </button>
+        </div>
+      ) : (
+        <div className="book-container">
+          <button className="nav-button left" onClick={prevPage}>
+            ◀
+          </button>
 
-        {isMobile ? (
-          <div className="mobile-layout">
-            <button className="nav-button left" onClick={prevPage}>
-              ◀
-            </button>
+          {isMobile ? (
+            <div className="mobile-layout">
+              <button className="nav-button left" onClick={prevPage}>
+                ◀
+              </button>
 
-            <div
-              className={`page mobile-page ${
-                slideDirection === "right"
-                  ? "slide-right"
-                  : slideDirection === "left"
-                  ? "slide-left"
-                  : ""
-              }`}
-            >
-              <h2>{pages[currentIndex].title}</h2>
-              <div>{pages[currentIndex].content}</div>
-              <div className="page-number">{currentIndex + 1}</div>
-            </div>
-
-            <button className="nav-button right" onClick={nextPage}>
-              ▶
-            </button>
-          </div>
-        ) : (
-          <HTMLFlipBook
-            width={768}
-            height={800}
-            size="stretch"
-            minWidth={315}
-            maxWidth={1000}
-            minHeight={400}
-            maxHeight={1536}
-            maxShadowOpacity={0.5}
-            showCover={false}
-            mobileScrollSupport={true}
-            ref={book}
-            className="flip-book"
-          >
-            {pages.map((page, index) => (
-              <div className="page" key={index}>
-                <h2>{page.title}</h2>
-                <div>{page.content}</div>
-                <div className="page-number">{index + 1}</div>
+              <div
+                className={`page mobile-page ${
+                  slideDirection === "right"
+                    ? "slide-right"
+                    : slideDirection === "left"
+                    ? "slide-left"
+                    : ""
+                }`}
+              >
+                <h2>{pages[currentIndex].title}</h2>
+                <div>{pages[currentIndex].content}</div>
+                <div className="page-number">{currentIndex + 1}</div>
               </div>
-            ))}
-          </HTMLFlipBook>
-        )}
 
-        <button className="nav-button right" onClick={nextPage}>
-          ▶
-        </button>
-      </div>
+              <button className="nav-button right" onClick={nextPage}>
+                ▶
+              </button>
+            </div>
+          ) : (
+            <HTMLFlipBook
+              width={768}
+              height={800}
+              size="stretch"
+              minWidth={500}
+              maxWidth={1600}
+              minHeight={400}
+              maxHeight={1536}
+              showCover={true}
+              mobileScrollSupport={true}
+              ref={book}
+              className="flip-book"
+            >
+              {pages.map((page, index) => (
+                <div
+                  className={`page ${index === 0 ? "intro-cover-page" : ""}`}
+                  key={index}
+                >
+                  {index !== 0 && <h2>{page.title}</h2>}
+                  <div>{page.content}</div>
+                  {index !== 0 && <div className="page-number">{index}</div>}
+                </div>
+              ))}
+            </HTMLFlipBook>
+          )}
+
+          <button className="nav-button right" onClick={nextPage}>
+            ▶
+          </button>
+        </div>
+      )}
     </div>
   );
 };
