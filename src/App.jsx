@@ -26,13 +26,31 @@ const App = () => {
     }
   }, [showIntro]);
 
+  useEffect(() => {
+    if (isMobile) {
+      setShowIntro(false);
+    }
+  }, [isMobile]);
+
   const pages = [
     {
       title: "",
       content: (
         <div className="intro-page-book">
           <h1>포트폴리오</h1>
-          <button onClick={() => book.current?.pageFlip().flipNext()}>
+          <button
+            onClick={() => {
+              if (isMobile) {
+                setSlideDirection(null);
+                requestAnimationFrame(() => {
+                  setSlideDirection("right");
+                  setCurrentIndex((prev) => prev + 1);
+                });
+              } else {
+                book.current?.pageFlip().flipNext();
+              }
+            }}
+          >
             시작하기
           </button>
         </div>
