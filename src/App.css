@@ -80,10 +80,14 @@ body {
 
 .page-number {
   text-align: center;
-  font-size: 1rem;
+  font-size: 2rem;
   color: #b0a392;
-  padding-top: 12px;
   border-top: 1px dashed #e0d8c7;
+  padding-top: 8px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-button {
@@ -292,6 +296,14 @@ body {
   animation: slideFromLeft 0.4s ease forwards;
 }
 
+.mobile-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 @media screen and (max-width: 1024px) {
   .page,
   .mobile-page {
@@ -323,8 +335,15 @@ body {
   .flip-book {
     display: none;
   }
+  .mobile-page .page-number {
+    position: static;
+    margin: 10px auto 0;
+    order: 2;
+  }
   .mobile-page {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .page h2 {
     font-size: 1.7rem;
@@ -350,6 +369,20 @@ body {
   .nav-button {
     font-size: 1.5rem;
     padding: 6px 10px;
+    top: 90%;
+  }
+  .book-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .nav-button.left {
+    order: 0;
+    align-self: flex-start;
+  }
+  .nav-button.right {
+    order: 2;
+    align-self: flex-end;
   }
 }
 

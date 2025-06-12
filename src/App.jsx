@@ -846,26 +846,29 @@ const App = () => {
   ];
 
   const nextPage = () => {
-    if (isMobile) {
-      if (currentIndex < pages.length - 1) {
+    if (isMobile && currentIndex < pages.length - 1) {
+      setSlideDirection(null);
+      requestAnimationFrame(() => {
         setSlideDirection("right");
         setCurrentIndex((prev) => prev + 1);
-      }
+      });
     } else {
       book.current?.pageFlip().flipNext();
     }
   };
 
   const prevPage = () => {
-    if (isMobile) {
-      if (currentIndex > 0) {
+    if (isMobile && currentIndex > 0) {
+      setSlideDirection(null);
+      requestAnimationFrame(() => {
         setSlideDirection("left");
         setCurrentIndex((prev) => prev - 1);
-      }
+      });
     } else {
       book.current?.pageFlip().flipPrev();
     }
   };
+
   return (
     <div className="portfolio-container">
       <div className="book-container">
@@ -874,18 +877,28 @@ const App = () => {
         </button>
 
         {isMobile ? (
-          <div
-            className={`page mobile-page ${
-              slideDirection === "right"
-                ? "slide-right"
-                : slideDirection === "left"
-                ? "slide-left"
-                : ""
-            }`}
-          >
-            <h2>{pages[currentIndex].title}</h2>
-            <div>{pages[currentIndex].content}</div>
-            <div className="page-number">{currentIndex + 1}</div>
+          <div className="mobile-layout">
+            <button className="nav-button left" onClick={prevPage}>
+              ◀
+            </button>
+
+            <div
+              className={`page mobile-page ${
+                slideDirection === "right"
+                  ? "slide-right"
+                  : slideDirection === "left"
+                  ? "slide-left"
+                  : ""
+              }`}
+            >
+              <h2>{pages[currentIndex].title}</h2>
+              <div>{pages[currentIndex].content}</div>
+              <div className="page-number">{currentIndex + 1}</div>
+            </div>
+
+            <button className="nav-button right" onClick={nextPage}>
+              ▶
+            </button>
           </div>
         ) : (
           <HTMLFlipBook
