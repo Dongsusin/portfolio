@@ -1,10 +1,21 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import emailjs from "emailjs-com";
 import "./App.css";
 
 const App = () => {
   const book = useRef();
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const pages = [
     {
@@ -835,41 +846,72 @@ const App = () => {
   ];
 
   const nextPage = () => {
-    if (book.current) book.current.pageFlip().flipNext();
+    if (isMobile) {
+      if (currentIndex < pages.length - 1) {
+        setSlideDirection("right");
+        setCurrentIndex((prev) => prev + 1);
+      }
+    } else {
+      book.current?.pageFlip().flipNext();
+    }
   };
 
   const prevPage = () => {
-    if (book.current) book.current.pageFlip().flipPrev();
+    if (isMobile) {
+      if (currentIndex > 0) {
+        setSlideDirection("left");
+        setCurrentIndex((prev) => prev - 1);
+      }
+    } else {
+      book.current?.pageFlip().flipPrev();
+    }
   };
-
   return (
     <div className="portfolio-container">
       <div className="book-container">
         <button className="nav-button left" onClick={prevPage}>
           ◀
         </button>
-        <HTMLFlipBook
-          width={600}
-          height={800}
-          size="stretch"
-          minWidth={315}
-          maxWidth={1000}
-          minHeight={400}
-          maxHeight={1536}
-          maxShadowOpacity={0.5}
-          showCover={false}
-          mobileScrollSupport={true}
-          ref={book} // ✅ ref 연결
-          className="flip-book"
-        >
-          {pages.map((page, index) => (
-            <div className="page" key={index}>
-              <h2>{page.title}</h2>
-              <p>{page.content}</p>
-              <div className="page-number">{index + 1}</div>
-            </div>
-          ))}
-        </HTMLFlipBook>
+
+        {isMobile ? (
+          <div
+            className={`page mobile-page ${
+              slideDirection === "right"
+                ? "slide-right"
+                : slideDirection === "left"
+                ? "slide-left"
+                : ""
+            }`}
+          >
+            <h2>{pages[currentIndex].title}</h2>
+            <div>{pages[currentIndex].content}</div>
+            <div className="page-number">{currentIndex + 1}</div>
+          </div>
+        ) : (
+          <HTMLFlipBook
+            width={768}
+            height={800}
+            size="stretch"
+            minWidth={315}
+            maxWidth={1000}
+            minHeight={400}
+            maxHeight={1536}
+            maxShadowOpacity={0.5}
+            showCover={false}
+            mobileScrollSupport={true}
+            ref={book}
+            className="flip-book"
+          >
+            {pages.map((page, index) => (
+              <div className="page" key={index}>
+                <h2>{page.title}</h2>
+                <div>{page.content}</div>
+                <div className="page-number">{index + 1}</div>
+              </div>
+            ))}
+          </HTMLFlipBook>
+        )}
+
         <button className="nav-button right" onClick={nextPage}>
           ▶
         </button>
