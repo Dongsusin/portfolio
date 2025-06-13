@@ -232,7 +232,7 @@ const App = () => {
       title: "목차",
       content: (
         <div className="index-page glow-text">
-          <h3>프로젝트 목차</h3>
+          <h3>프로젝트 목록</h3>
           <ul className="toc-list">
             <li>
               포켓몬 도감 프로젝트(개인)
