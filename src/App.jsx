@@ -858,7 +858,7 @@ const App = () => {
               <a href="/app/2048.apk" download>
                 앱 다운로드
               </a>
-              <a href="">GitHub</a>
+              <a href="https://github.com/Dongsusin/unity2048">GitHub</a>
             </div>
             <div className="project-Skill">
               <h3>사용 기술</h3>
@@ -906,7 +906,9 @@ const App = () => {
               <a href="/app/SwiprBreakOut.apk" download>
                 앱 다운로드
               </a>
-              <a href="">GitHub</a>
+              <a href="https://github.com/Dongsusin/unitySwipe-Breakout">
+                GitHub
+              </a>
             </div>
             <div className="project-Skill">
               <h3>사용 기술</h3>
