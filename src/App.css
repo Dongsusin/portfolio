@@ -165,7 +165,7 @@ body {
   padding: 1rem;
   border-bottom: 1px solid #ddd;
   vertical-align: middle;
-  text-align: left;
+  text-align: center;
   text-wrap: nowrap;
 }
 
@@ -181,6 +181,43 @@ body {
   height: 40px;
   object-fit: contain;
   cursor: pointer;
+}
+
+.index-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
+.toc-list {
+  list-style: none;
+  padding: 0;
+  line-height: 2;
+}
+
+.toc-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.toc-list button {
+  padding: 4px 8px;
+  background-color: gold;
+  border: none;
+  border-radius: 4px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.toc-list button:hover {
+  background-color: #ffd700;
+  transform: scale(1.05);
 }
 
 .project-page img,
@@ -442,6 +479,33 @@ body {
 
 .zoom-out {
   animation: zoomToCenter 1s ease forwards;
+}
+
+@keyframes glowText {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  70% {
+    opacity: 0.2;
+    text-shadow: 0 0 2px #7e7e7e, 0 0 5px #a7a7a7, 0 0 10px #979797,
+      0 0 30px #bababa;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 1px #cecece, 0 0 3px #adadad;
+  }
+}
+
+.glow-text {
+  animation: glowText 1.5s ease-out;
+}
+.single-centered-page {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 1024px) {

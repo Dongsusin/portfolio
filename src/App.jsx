@@ -21,13 +21,21 @@ const App = () => {
 
   useEffect(() => {
     if (!showIntro && !isMobile) {
-      setTimeout(() => book.current?.pageFlip().flipNext(), 500);
+      setTimeout(() => book.current?.pageFlip().flipNext(), 1500);
     }
   }, [showIntro, isMobile]);
 
   useEffect(() => {
     if (isMobile) setShowIntro(false);
   }, [isMobile]);
+
+  const goToPage = (pageNumber) => {
+    if (isMobile) {
+      setCurrentIndex(pageNumber);
+    } else {
+      book.current?.pageFlip().flip(pageNumber);
+    }
+  };
 
   const pages = [
     {
@@ -53,7 +61,7 @@ const App = () => {
       content: (
         <div className="intro-page">
           <img src="/profile.jpg" alt="프로필" className="profile-img" />
-          <div className="info-text">
+          <div className="info-text glow-text">
             <p>
               <strong>이름:</strong> 신동수
             </p>
@@ -76,7 +84,7 @@ const App = () => {
     {
       title: "기술 스택",
       content: (
-        <div className="skills-page">
+        <div className="skills-page glow-text">
           <table className="skills-table">
             <thead>
               <tr>
@@ -201,6 +209,65 @@ const App = () => {
       ),
     },
     {
+      title: "교육및 자격증",
+      content: (
+        <div className="education-page glow-text">
+          <h3>멋쟁이 사자처럼 프론트엔드 부트캠프</h3>
+          <p>2025.02.05~2025.08.08</p>
+          <p>
+            Html,Css,JS,React를 이용해서 다양한 프로젝트를 해보면서 프론트엔드에
+            대하여 자세히 알수있었고 팀프로젝트를 해보면서 협업경험을
+            쌓을수있었습니다.
+          </p>
+          <h3>자격증</h3>
+          <p>정보치리기능사(2019.03)</p>
+          <p>컴퓨터활용능력 2급(2020.06)</p>
+          <p>전자기기기능사(2020.09)</p>
+          <p>제한무선통신사(2020.10)</p>
+          <p>토익(748점)</p>
+        </div>
+      ),
+    },
+    {
+      title: "목차",
+      content: (
+        <div className="index-page glow-text">
+          <h3>프로젝트 목차</h3>
+          <ul className="toc-list">
+            <li>
+              포켓몬 도감 프로젝트(개인)
+              <button onClick={() => goToPage(5)}>이동</button>
+            </li>
+            <li>
+              여행 웹사이트(개인)
+              <button onClick={() => goToPage(7)}>이동</button>
+            </li>
+            <li>
+              데스크탑 프로젝트(개인)
+              <button onClick={() => goToPage(9)}>이동</button>
+            </li>
+            <li>
+              UI/UX 프로젝트(팀)
+              <button onClick={() => goToPage(11)}>이동</button>
+            </li>
+            <li>
+              JS 프로젝트(팀)
+              <button onClick={() => goToPage(13)}>이동</button>
+            </li>
+            <li>
+              2048(유니티)
+              <button onClick={() => goToPage(15)}>이동</button>
+            </li>
+            <li>
+              벽돌깨기(유니티)
+              <button onClick={() => goToPage(16)}>이동</button>
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+
+    {
       title: "개인 프로젝트",
       content: (
         <div className="project-page">
@@ -213,7 +280,7 @@ const App = () => {
               "/pokedex4.png",
             ]}
           />
-          <div className="project-item">
+          <div className="project-item glow-text">
             <h3>포켓몬 API 도감</h3>
             <div className="project-title">
               <a href="https://scintillating-beignet-3bd5f7.netlify.app/">
@@ -265,7 +332,7 @@ const App = () => {
     {
       title: "주요 기능",
       content: (
-        <div className="project-page">
+        <div className="project-page glow-text">
           <div className="project-item">
             <h3>검색 기능</h3>
             <p>포켓몬의 이름을 검색창에 입력해서 해당 포켓몬 필터링</p>
@@ -294,7 +361,7 @@ const App = () => {
           <ProjectSlider
             images={["/여행웹1.png", "/여행웹.png", "/여행웹2.gif"]}
           />
-          <div className="project-item">
+          <div className="project-item glow-text">
             <h3>여행 웹사이트</h3>
             <div className="project-title">
               <a href="https://bespoke-lamington-ba8b2f.netlify.app/">
@@ -360,7 +427,7 @@ const App = () => {
     {
       title: "주요 기능",
       content: (
-        <div className="project-page">
+        <div className="project-page glow-text">
           <div className="project-item">
             <h3>3D 지구본 렌더링</h3>
             <p>
@@ -403,7 +470,7 @@ const App = () => {
               "/데스크탑5.png",
             ]}
           />
-          <div className="project-item">
+          <div className="project-item glow-text">
             <h3>PC프로젝트</h3>
             <div className="project-title">
               <a href="https://jovial-alpaca-3d63f1.netlify.app/">
@@ -460,7 +527,7 @@ const App = () => {
     {
       title: "주요 기능",
       content: (
-        <div className="project-page">
+        <div className="project-page glow-text">
           <div className="project-item">
             <h3>메인 화면 UI</h3>
             <p>
@@ -523,7 +590,7 @@ const App = () => {
               "/uxui프로젝트6.png",
             ]}
           />
-          <div className="project-item">
+          <div className="project-item glow-text">
             <h3>UI/UX프로젝트</h3>
             <div className="project-title">
               <a href="https://9rodigital-willie.netlify.app/">배포 사이트</a>
@@ -600,7 +667,7 @@ const App = () => {
     {
       title: "주요 기능",
       content: (
-        <div className="project-page">
+        <div className="project-page glow-text">
           <div className="project-item">
             <h3>홈 화면</h3>
             <p>
@@ -648,7 +715,7 @@ const App = () => {
               "/JS프로젝트6.png",
             ]}
           />
-          <div className="project-item">
+          <div className="project-item glow-text">
             <h3>JS프로젝트</h3>
             <div className="project-title">
               <a href="https://3lines-2048.netlify.app/">배포 사이트</a>
@@ -721,7 +788,7 @@ const App = () => {
     {
       title: "주요 기능",
       content: (
-        <div className="project-page">
+        <div className="project-page glow-text">
           <div className="project-item">
             <h3>게임 시작</h3>
             <p>게임시작시 2또는 4의 값을 가진 타일 2개를 랜덤위치에 생성</p>
@@ -785,7 +852,7 @@ const App = () => {
             alt="unity2048"
             className="project-image"
           />
-          <div className="project-item">
+          <div className="project-item glow-text">
             <h3>유니티 2048앱</h3>
             <div className="project-title">
               <a href="/app/2048.apk" download>
@@ -833,7 +900,7 @@ const App = () => {
             alt="unitySwiprBreakOut"
             className="project-image"
           />
-          <div className="project-item">
+          <div className="project-item glow-text">
             <h3>유니티 벽돌깨기앱</h3>
             <div className="project-title">
               <a href="/app/SwiprBreakOut.apk" download>
@@ -873,29 +940,9 @@ const App = () => {
       ),
     },
     {
-      title: "교육및 자격증",
-      content: (
-        <div className="education-page">
-          <h3>멋쟁이 사자처럼 프론트엔드 부트캠프</h3>
-          <p>2025.02.05~2025.08.08</p>
-          <p>
-            Html,Css,JS,React를 이용해서 다양한 프로젝트를 해보면서 프론트엔드에
-            대하여 자세히 알수있었고 팀프로젝트를 해보면서 협업경험을
-            쌓을수있었습니다.
-          </p>
-          <h3>자격증</h3>
-          <p>정보치리기능사(2019.03)</p>
-          <p>컴퓨터활용능력 2급(2020.06)</p>
-          <p>전자기기기능사(2020.09)</p>
-          <p>제한무선통신사(2020.10)</p>
-          <p>토익(748점)</p>
-        </div>
-      ),
-    },
-    {
       title: "메일 보내기",
       content: (
-        <div className="contact-page">
+        <div className="contact-page glow-text">
           <form
             onSubmit={(e) => {
               e.preventDefault();
