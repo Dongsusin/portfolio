@@ -16,19 +16,23 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #f5f0e6;
+  position: relative;
+  background-image: url("/배경.avif");
+  background-size: cover;
 }
 
 .book-container {
   width: 100vw;
   height: 100vh;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  position: relative;
 }
 
 .flip-book {
   width: 100% !important;
   height: 100% !important;
   touch-action: pan-y pinch-zoom;
+  transform: scale(0.9);
+  transform-origin: center center;
 }
 
 .page {
