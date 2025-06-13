@@ -11,25 +11,19 @@ const App = () => {
   const [showIntro, setShowIntro] = useState(true);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 426);
-    };
+    const handleResize = () => setIsMobile(window.innerWidth <= 426);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   useEffect(() => {
     if (!showIntro && !isMobile) {
-      setTimeout(() => {
-        book.current?.pageFlip().flipNext();
-      }, 500);
+      setTimeout(() => book.current?.pageFlip().flipNext(), 500);
     }
-  }, [showIntro]);
+  }, [showIntro, isMobile]);
 
   useEffect(() => {
-    if (isMobile) {
-      setShowIntro(false);
-    }
+    if (isMobile) setShowIntro(false);
   }, [isMobile]);
 
   const pages = [
@@ -40,15 +34,10 @@ const App = () => {
           <h1>포트폴리오</h1>
           <button
             onClick={() => {
-              if (isMobile) {
-                setSlideDirection(null);
-                requestAnimationFrame(() => {
-                  setSlideDirection("right");
-                  setCurrentIndex((prev) => prev + 1);
-                });
-              } else {
-                book.current?.pageFlip().flipNext();
-              }
+              isMobile
+                ? (setSlideDirection("right"),
+                  setCurrentIndex((prev) => prev + 1))
+                : book.current?.pageFlip().flipNext();
             }}
           >
             시작하기
@@ -874,14 +863,8 @@ const App = () => {
                   e.target,
                   "zWGdm7RB-SiluN_O1"
                 )
-                .then(
-                  (result) => {
-                    alert("메일이 성공적으로 전송되었습니다.");
-                  },
-                  (error) => {
-                    alert("메일 전송에 실패했습니다.");
-                  }
-                );
+                .then(() => alert("메일이 성공적으로 전송되었습니다."))
+                .catch(() => alert("메일 전송에 실패했습니다."));
               e.target.reset();
             }}
           >
@@ -901,27 +884,17 @@ const App = () => {
   ];
 
   const nextPage = () => {
-    if (isMobile && currentIndex < pages.length - 1) {
-      setSlideDirection(null);
-      requestAnimationFrame(() => {
-        setSlideDirection("right");
-        setCurrentIndex((prev) => prev + 1);
-      });
-    } else {
-      book.current?.pageFlip().flipNext();
-    }
+    isMobile
+      ? currentIndex < pages.length - 1 &&
+        (setSlideDirection("right"), setCurrentIndex((prev) => prev + 1))
+      : book.current?.pageFlip().flipNext();
   };
 
   const prevPage = () => {
-    if (isMobile && currentIndex > 0) {
-      setSlideDirection(null);
-      requestAnimationFrame(() => {
-        setSlideDirection("left");
-        setCurrentIndex((prev) => prev - 1);
-      });
-    } else {
-      book.current?.pageFlip().flipPrev();
-    }
+    isMobile
+      ? currentIndex > 0 &&
+        (setSlideDirection("left"), setCurrentIndex((prev) => prev - 1))
+      : book.current?.pageFlip().flipPrev();
   };
 
   return (
@@ -944,7 +917,6 @@ const App = () => {
               <button className="nav-button left" onClick={prevPage}>
                 ◀
               </button>
-
               <div
                 className={`page mobile-page ${
                   slideDirection === "right"
@@ -958,7 +930,6 @@ const App = () => {
                 <div>{pages[currentIndex].content}</div>
                 <div className="page-number">{currentIndex + 1}</div>
               </div>
-
               <button className="nav-button right" onClick={nextPage}>
                 ▶
               </button>
