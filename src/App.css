@@ -607,6 +607,9 @@ body {
 }
 
 @media screen and (max-width: 426px) {
+  .portfolio-container {
+    background-image: none;
+  }
   .page {
     padding: 10px;
   }
