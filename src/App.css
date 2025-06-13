@@ -147,6 +147,7 @@ body {
 .education-page {
   padding: 1rem;
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .skills-table {
@@ -182,7 +183,8 @@ body {
   cursor: pointer;
 }
 
-.project-page img {
+.project-page img,
+.project-slider .project-image {
   width: 100%;
   height: 200px;
   object-fit: contain;

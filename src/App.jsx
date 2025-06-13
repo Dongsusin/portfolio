@@ -1,6 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
 import emailjs from "emailjs-com";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ProjectSlider from "./ProjectSlider";
 import "./App.css";
 
 const App = () => {
@@ -201,7 +204,15 @@ const App = () => {
       title: "개인 프로젝트",
       content: (
         <div className="project-page">
-          <img src="/pokedex.gif" alt="포켓몬 도감" className="project-image" />
+          <ProjectSlider
+            images={[
+              "/pokedex.gif",
+              "/pokedex1.png",
+              "/pokedex2.png",
+              "/pokedex3.png",
+              "/pokedex4.png",
+            ]}
+          />
           <div className="project-item">
             <h3>포켓몬 API 도감</h3>
             <div className="project-title">
@@ -280,7 +291,9 @@ const App = () => {
       title: "개인 프로젝트",
       content: (
         <div className="project-page">
-          <img src="/여행웹.png" alt="여행 웹" className="project-image" />
+          <ProjectSlider
+            images={["/여행웹1.png", "/여행웹.png", "/여행웹2.gif"]}
+          />
           <div className="project-item">
             <h3>여행 웹사이트</h3>
             <div className="project-title">
@@ -380,7 +393,16 @@ const App = () => {
       title: "개인 프로젝트",
       content: (
         <div className="project-page">
-          <img src="/데스크탑.png" alt="DeskTop" className="project-image" />
+          <ProjectSlider
+            images={[
+              "/데스크탑.png",
+              "/데스크탑1.png",
+              "/데스크탑2.png",
+              "/데스크탑3.png",
+              "/데스크탑4.png",
+              "/데스크탑5.png",
+            ]}
+          />
           <div className="project-item">
             <h3>PC프로젝트</h3>
             <div className="project-title">
@@ -490,7 +512,17 @@ const App = () => {
       title: "팀 프로젝트",
       content: (
         <div className="project-page">
-          <img src="/uxui프로젝트.png" alt="UI/UX" className="project-image" />
+          <ProjectSlider
+            images={[
+              "/uxui프로젝트.png",
+              "/uxui프로젝트1.png",
+              "/uxui프로젝트2.png",
+              "/uxui프로젝트3.png",
+              "/uxui프로젝트4.png",
+              "/uxui프로젝트5.png",
+              "/uxui프로젝트6.png",
+            ]}
+          />
           <div className="project-item">
             <h3>UI/UX프로젝트</h3>
             <div className="project-title">
@@ -605,7 +637,17 @@ const App = () => {
       title: "팀 프로젝트",
       content: (
         <div className="project-page">
-          <img src="/JS프로젝트.png" alt="js" className="project-image" />
+          <ProjectSlider
+            images={[
+              "/JS프로젝트.png",
+              "/JS프로젝트1.png",
+              "/JS프로젝트2.png",
+              "/JS프로젝트3.png",
+              "/JS프로젝트4.png",
+              "/JS프로젝트5.png",
+              "/JS프로젝트6.png",
+            ]}
+          />
           <div className="project-item">
             <h3>JS프로젝트</h3>
             <div className="project-title">
