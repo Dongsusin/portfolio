@@ -99,23 +99,28 @@ const App = () => {
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
                     alt="HTML5"
+                    title="HTNL5"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
                     alt="CSS3"
+                    title="CSS3"
                   />
                   <img src="/테일윈드.png" alt="TailwindCSS" />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
                     alt="JavaScript"
+                    title="JavaScript"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
                     alt="TypeScript"
+                    title="TypeScript"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
                     alt="React"
+                    title="React"
                   />
                 </td>
               </tr>
@@ -125,25 +130,30 @@ const App = () => {
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
                     alt="VS Code"
+                    title="VS Code"
                   />
                   <img
                     src="https://vitejs.dev/logo.svg"
                     alt="Vite"
+                    title="Vite"
                     style={{ background: "#fff", borderRadius: "4px" }}
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"
                     alt="Vue.js"
+                    title="Vue.js"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
                     alt="Next.js"
+                    title="Next.js"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg"
                     alt="Three.js"
+                    title="Three.js"
                   />
-                  <img src="/EmailJS.png" alt="/EmailJS" />
+                  <img src="/EmailJS.png" title="Three.js" alt="/EmailJS" />
                 </td>
               </tr>
               <tr>
@@ -152,15 +162,18 @@ const App = () => {
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
                     alt="Git"
+                    title="Git"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
                     alt="GitHub"
+                    title="GitHub"
                   />
-                  <img src="/디스코드.jpeg" alt="Discord" />
+                  <img src="/디스코드.jpeg" title="디스코드" alt="Discord" />
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
                     alt="Notion"
+                    title="Notion"
                   />
                 </td>
               </tr>
@@ -170,18 +183,22 @@ const App = () => {
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
                     alt="Figma"
+                    title="Figma"
                   />
                   <img
                     src="https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png"
                     alt="Netlify"
+                    title="Netlify"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"
                     alt="Unity"
+                    title="Unity"
                   />
                   <img
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"
                     alt="C#"
+                    title="C#"
                   />
                 </td>
               </tr>
