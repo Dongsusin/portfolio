@@ -231,9 +231,9 @@ const App = () => {
     {
       title: "목차",
       content: (
-        <div className="index-page glow-text">
+        <div className="index-page">
           <h3>프로젝트 목록</h3>
-          <ul className="toc-list">
+          <ul className="toc-list glow-text">
             <li>
               포켓몬 도감 프로젝트(개인)
               <button onClick={() => goToPage(5)}>이동</button>

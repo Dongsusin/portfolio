@@ -491,7 +491,6 @@ body {
     text-shadow: none;
   }
   70% {
-    opacity: 0.2;
     text-shadow: 0 0 2px #7e7e7e, 0 0 5px #a7a7a7, 0 0 10px #979797,
       0 0 30px #bababa;
   }
@@ -503,6 +502,7 @@ body {
 
 .glow-text {
   animation: glowText 1.5s ease-out;
+  text-shadow: 0 0 1px #cecece, 0 0 3px #adadad;
 }
 .single-centered-page {
   display: flex !important;
