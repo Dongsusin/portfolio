@@ -534,7 +534,7 @@ body {
     height: 90px;
   }
   .project-item {
-    max-height: 360px;
+    max-height: 65vh;
   }
 
   .intro-screen {
@@ -573,7 +573,6 @@ body {
     gap: 6px;
   }
   .project-title {
-    flex-direction: column;
     font-size: 14px;
   }
   .badge-container,
@@ -599,7 +598,7 @@ body {
     align-self: flex-end;
   }
   .page-number {
-    width: 100%;
+    width: 95%;
   }
 }
 
