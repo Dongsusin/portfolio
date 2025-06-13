@@ -143,6 +143,7 @@ const App = () => {
                     title="Three.js"
                   />
                   <img src="/EmailJS.png" title="Three.js" alt="/EmailJS" />
+                  <img src="/node-js.svg" title="Node.js" alt="Node.js" />
                 </td>
               </tr>
               <tr>
