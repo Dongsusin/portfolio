@@ -77,6 +77,9 @@ const App = () => {
             <p>
               <strong>이메일:</strong> auroratime020715@gmail.com
             </p>
+            <a href="/이력서/이력서.pdf" download className="resume-button">
+          이력서 다운로드
+          </a>
           </div>
         </div>
       ),

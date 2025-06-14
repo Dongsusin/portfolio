@@ -145,6 +145,27 @@ body {
   gap: 10px;
 }
 
+.resume-button {
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #bfa77a, #d9c9a3);
+  color: #4b3621;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  list-style: none;
+  text-decoration: none;
+}
+
+.resume-button:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+
 .skills-page,
 .project-page,
 .contact-page,
