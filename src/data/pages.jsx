@@ -189,7 +189,7 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
       content: (
         <div className="index-page">
           <ul className="toc-list glow-text">
-            <h3>개인 프로젝트</h3>
+            <h3>&bull;개인 프로젝트</h3>
             <li>
               영화웹 프로젝트(개인)
               <button onClick={() => goToPage(5)}>이동</button>
@@ -206,7 +206,7 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               데스크탑 프로젝트(개인)
               <button onClick={() => goToPage(11)}>이동</button>
             </li>
-            <h3>팀 프로젝트</h3>
+            <h3>&bull;팀 프로젝트</h3>
             <li>
               UI/UX 프로젝트(팀)
               <button onClick={() => goToPage(13)}>이동</button>
@@ -215,7 +215,7 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               JS 프로젝트(팀)
               <button onClick={() => goToPage(15)}>이동</button>
             </li>
-            <h3>유니티 프로젝트</h3>
+            <h3>&bull;유니티 프로젝트</h3>
             <li>
               2048(유니티)
               <button onClick={() => goToPage(17)}>이동</button>
@@ -251,7 +251,7 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               <a href="https://github.com/Dongsusin/movie-cgv">GitHub</a>
             </div>
             <div className="project-Skill">
-              <h3>사용 기술</h3>
+              <h3>&bull;사용 기술</h3>
               <div className="badge-container">
                 <span className="badge">
                   <img
@@ -292,25 +292,25 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
       content: (
         <div className="project-page glow-text">
           <div className="project-item">
-            <h3>헤더</h3>
+            <h3>&bull;헤더</h3>
             <p>각페이지로 전환할수있는 기능</p>
-            <h3>메인페이지</h3>
+            <h3>&bull;메인페이지</h3>
             <p>영화 예고편을 랜덤으로 5개불러와서 티저느낌으로 랜더링하며 밑에는 영화리스트를 구현</p>
-            <h3>영화 제목 검색및 장르 검색,필터링</h3>
+            <h3>&bull;영화 제목 검색및 장르 검색,필터링</h3>
             <p>
               영화의 제목이나 장르를 이용해서 영화를 검색및 필터링 할수있는 기능
             </p>
             <h3>페이지 네이션</h3>
             <p>1024이상에서는 1페이지에 20개씨 이하에서는 10개씩 정렬돼게 페이지를 나누는 기능</p>
-            <h3>상세페이지</h3>
+            <h3>&bull;상세페이지</h3>
             <p>
               영화 이미지를 클릭해서 상세페이지로 이동이 가능하며 상세페이지에서는 해당영화의 다양한정보와 예고편을 볼수있습니다.
             </p>
-            <h3>예메페이지</h3>
+            <h3>&bull;예메페이지</h3>
             <p>예메하기 버튼을 클릭해서 이동할수있으며, 실제 영화를 예메하는 느낌이나도록 구현했습니다.</p>
-            <h3>상점페이지/장바구니</h3>
+            <h3>&bull;상점페이지/장바구니</h3>
             <p>상점페이지에서 상품을 장바구니에 추가할수있으며 추가된 상품은 해더에 장바구니/수량으로 표시돼며 장바구니클릭으로 현재추가한 상품을 볼수있습니다.</p>
-            <h3>티켓페이지</h3>
+            <h3>&bull;티켓페이지</h3>
             <p>예메가 완료돼면 티켓페이지에 로컬스트리지로 티켓이 추가돼며 관리할수있습니다.</p>
           </div>
         </div>
@@ -339,11 +339,11 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               <a href="https://github.com/Dongsusin/pokedex">GitHub</a>
             </div>
             <div className="project-Skill">
-              <h3>사용 API</h3>
+              <h3>&bull;사용 API</h3>
               <div className="api-container">
                 <span className="badge">PokeAPI</span>
               </div>
-              <h3>사용 기술</h3>
+              <h3>&bull;사용 기술</h3>
               <div className="badge-container">
                 <span className="badge">
                   <img
@@ -384,18 +384,18 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
       content: (
         <div className="project-page glow-text">
           <div className="project-item">
-            <h3>검색 기능</h3>
+            <h3>&bull;검색 기능</h3>
             <p>포켓몬의 이름을 검색창에 입력해서 해당 포켓몬 필터링</p>
-            <h3>타입/세대/즐겨찾기 기능</h3>
+            <h3>&bull;타입/세대/즐겨찾기 기능</h3>
             <p>
               타입 필터링은 2개까지 선택할수있으면 선택된 타입을 포함하고있는
               포켓몬을 필터링, 세대별 필터링은 각 세대에따라 번호범위를 주고
               해당 범위의 포켓몬을 필터링, 즐겨찾기는 즐겨찾기를 추가한 포켓몬만
               필터링
             </p>
-            <h3>페이지 네이션</h3>
+            <h3>&bull;페이지 네이션</h3>
             <p>1페이지에 30마리씩 나눠서 전체 포켓몬 리스트를 grid로 렌더링</p>
-            <h3>상세페이지</h3>
+            <h3>&bull;상세페이지</h3>
             <p>
               포켓몬 카드 클릭시 상세 페이지로 이동하며 상세페이지에는
               스탯,진화정보등을 추가로 보여줌
@@ -420,11 +420,11 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               <a href="https://github.com/Dongsusin/travel-globe">GitHub</a>
             </div>
             <div className="project-Skill">
-              <h3>사용 API</h3>
+              <h3>&bull;사용 API</h3>
               <div className="api-container">
                 <span className="badge">OpenWeather API</span>
               </div>
-              <h3>사용 기술</h3>
+              <h3>&bull;사용 기술</h3>
               <div className="badge-container">
                 <span className="badge">
                   <img
@@ -479,25 +479,25 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
       content: (
         <div className="project-page glow-text">
           <div className="project-item">
-            <h3>3D 지구본 렌더링</h3>
+            <h3>&bull;3D 지구본 렌더링</h3>
             <p>
               Three.js와 @react-three/fiber를 활용하여 회전 가능한 3D 지구본을
               렌더링하고, 별(star) 배경을 통해 시각적으로 몰입감 있는 UI 제공
             </p>
 
-            <h3>여행지 위치 표시</h3>
+            <h3>&bull;여행지 위치 표시</h3>
             <p>
               위도/경도 정보를 기반으로 여행지를 지구본 위에 마커로 표시하며,
               위치 계산을 통해 3D 좌표에 정확히 배치
             </p>
 
-            <h3>마커 Hover & Click 인터랙션</h3>
+            <h3>&bull;마커 Hover & Click 인터랙션</h3>
             <p>
               마커에 마우스를 올리면 여행지 이름을 툴팁으로 보여주고, 클릭 시
               해당 여행지의 상세 정보 창으로 이동
             </p>
 
-            <h3>여행지 상세 정보</h3>
+            <h3>&bull;여행지 상세 정보</h3>
             <p>
               선택된 여행지에 대해 날씨, 이미지, 설명, 환율 등 다양한 정보를
               API를 통해 불러와 표시
@@ -529,12 +529,12 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               <a href="https://github.com/Dongsusin/DeskTop">GitHub</a>
             </div>
             <div className="project-Skill">
-              <h3>사용 API</h3>
+              <h3>&bull;사용 API</h3>
               <div className="api-container">
                 <span className="badge">OpenWeather API</span>
                 <span className="badge">navigator.geolocation</span>
               </div>
-              <h3>사용 기술</h3>
+              <h3>&bull;사용 기술</h3>
               <div className="badge-container">
                 <span className="badge">
                   <img
@@ -579,43 +579,43 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
       content: (
         <div className="project-page glow-text">
           <div className="project-item">
-            <h3>메인 화면 UI</h3>
+            <h3>&bull;메인 화면 UI</h3>
             <p>
               바탕화면에 폴더와 앱 아이콘을 배치해 실제 운영체제 데스크탑처럼
               구성하며, 하단에는 작업 표시줄(하단바)과 현재 날짜를 확인할 수
               있는 달력 위젯을 구현
             </p>
 
-            <h3>계산기 앱</h3>
+            <h3>&bull;계산기 앱</h3>
             <p>
               사칙연산이 가능한 계산기를 제공하며, 사용자가 입력한 계산 내역을
               히스토리로 저장하여 확인할 수 있음
             </p>
 
-            <h3>날씨 앱</h3>
+            <h3>&bull;날씨 앱</h3>
             <p>
               OpenWeatherApi를 이용해서 현재위치에대한 날씨정보를 보여줍니다.
             </p>
 
-            <h3>지도 앱</h3>
+            <h3>&bull;지도 앱</h3>
             <p>
               지도에 마커를 표시하고, 위치 검색 기능을 통해 원하는 위치를 탐색할
               수 있음.
             </p>
 
-            <h3>메모장</h3>
+            <h3>&bull;메모장</h3>
             <p>
               ToDoList느낌으로 메모를 추가및 삭제할수있으며 메모 작성중에는
               현재작성중인 메오의 글자수를 보여줍니다.
             </p>
 
-            <h3>그림판</h3>
+            <h3>&bull;그림판</h3>
             <p>
               Canvas를 이용해서 다양한 방식으로 그림을 그리고 해당 그림을
               png파일로 다운받을수있습니다.
             </p>
 
-            <h3>다양한 게임앱</h3>
+            <h3>&bull;다양한 게임앱</h3>
             <p>
               테트리스,반응속도 테스트,틱택톡등 다양한게임을 React,JavaScript를
               이용해서 구현해봤으며 테트리스,턴제카드게임등 좀더 복잡하고 어려운
@@ -649,7 +649,7 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               </a>
             </div>
             <div className="project-Skill">
-              <h3>사용 기술</h3>
+              <h3>&bull;사용 기술</h3>
               <div className="badge-container">
                 <span className="badge">
                   <img
@@ -719,29 +719,29 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
       content: (
         <div className="project-page glow-text">
           <div className="project-item">
-            <h3>홈 화면</h3>
+            <h3>&bull;홈 화면</h3>
             <p>
               추천 도서, 인기 도서, 신간 도서 등 다양한 카테고리별 도서 큐레이션
             </p>
 
-            <h3>도서 검색</h3>
+            <h3>&bull;도서 검색</h3>
             <p>제목, 저자, 출판사 등 다양한 조건으로 도서 검색 기능</p>
 
-            <h3>도서 상세 페이지</h3>
+            <h3>&bull;도서 상세 페이지</h3>
             <p>도서 정보, 리뷰, 관련 도서 추천</p>
 
-            <h3>내 서재</h3>
+            <h3>&bull;내 서재</h3>
             <p>사용자가 읽은 책, 읽고 있는 책, 찜한 책 관리</p>
 
-            <h3>반응형 디자인</h3>
+            <h3>&bull;반응형 디자인</h3>
             <p>모바일, 태블릿, 데스크톱 환경에 최적화된 UI</p>
 
-            <h3>모듈식 레이아웃</h3>
+            <h3>&bull;모듈식 레이아웃</h3>
             <p>
               헤더, 푸터, 버튼, 타이틀 등 레이아웃 요소를 컴포넌트 형식으로 제작
             </p>
 
-            <h3>Tailwind 기반 디자인</h3>
+            <h3>&bull;Tailwind 기반 디자인</h3>
             <p>
               일관된 디자인 시스템으로 빠른 스타일링이 가능하며, 커스터마이징이
               용이
@@ -774,7 +774,7 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
               </a>
             </div>
             <div className="project-Skill">
-              <h3>사용 기술</h3>
+              <h3>&bull;사용 기술</h3>
               <div className="badge-container">
                 <span className="badge">
                   <img
@@ -840,54 +840,54 @@ const pages = (goToPage, isMobile, book, setCurrentIndex, setSlideDirection) => 
       content: (
         <div className="project-page glow-text">
           <div className="project-item">
-            <h3>게임 시작</h3>
+            <h3>&bull;게임 시작</h3>
             <p>게임시작시 2또는 4의 값을 가진 타일 2개를 랜덤위치에 생성</p>
 
-            <h3>타일 이동및 병합</h3>
+            <h3>&bull;타일 이동및 병합</h3>
             <p>
               방향키를 이용해서 타일을 이동하며 같은값을 가진 타일이 만나면
               현재값*2로 병합처리
             </p>
 
-            <h3>점수 시스템</h3>
+            <h3>&bull;점수 시스템</h3>
             <p>
               타일병합시 현재값에따라 점수가 증가하며 로컬로 현재점수를 저장하며
               최고점수와 현재점수를 비교해서 최고점수를 저장및갱신
             </p>
 
-            <h3>사운드 효과</h3>
+            <h3>&bull;사운드 효과</h3>
             <p>
               게임시작시 bgm,클릭시 터치사운드 등을 재생하며 사운드바를 이용해서
               음량을 조절
             </p>
 
-            <h3>게임 종료 처리</h3>
+            <h3>&bull;게임 종료 처리</h3>
             <p>
               이동및 병합후 이동이 가능한지 확인후 이동이 불가능하면
               게임종료처리후 게임종료표시
             </p>
 
-            <h3>모바일 대응</h3>
+            <h3>&bull;모바일 대응</h3>
             <p>스크린 크기에따라 css디자인이 변하며 반응형으로 디자인</p>
 
-            <h3>게임 보드 크기변경</h3>
+            <h3>&bull;게임 보드 크기변경</h3>
             <p>
               게임 보드 크기 변경으로 3*3,4*4,5*5 형식으로 보드의 크기를 변경함
             </p>
 
-            <h3>타임어택모드</h3>
+            <h3>&bull;타임어택모드</h3>
             <p>
               일정시간동안 기록을 내는 모드로 상단에 프로그래스바 형식으로
               타이머 표시
             </p>
 
-            <h3>하드 모드</h3>
+            <h3>&bull;하드 모드</h3>
             <p>
               게임시작시 이동이 불가능한 타일을 1개 추가로 생성해서 플레이하는
               모드
             </p>
 
-            <h3>AI대전 모드</h3>
+            <h3>&bull;AI대전 모드</h3>
             <p>TS를 이용해서 만든AI와 점수를 대결하는 모드</p>
           </div>
         </div>
