@@ -232,11 +232,11 @@ const App = () => {
       ),
     },
     {
-      title: "목차",
+      title: "프로젝트 목록",
       content: (
         <div className="index-page">
-          <h3>프로젝트 목록</h3>
           <ul className="toc-list glow-text">
+            <h3>개인 프로젝트</h3>
             <li>
               영화웹 프로젝트(개인)
               <button onClick={() => goToPage(5)}>이동</button>
@@ -253,6 +253,7 @@ const App = () => {
               데스크탑 프로젝트(개인)
               <button onClick={() => goToPage(11)}>이동</button>
             </li>
+            <h3>팀 프로젝트</h3>
             <li>
               UI/UX 프로젝트(팀)
               <button onClick={() => goToPage(13)}>이동</button>
@@ -261,6 +262,7 @@ const App = () => {
               JS 프로젝트(팀)
               <button onClick={() => goToPage(15)}>이동</button>
             </li>
+            <h3>유니티 프로젝트</h3>
             <li>
               2048(유니티)
               <button onClick={() => goToPage(17)}>이동</button>
