@@ -66,7 +66,6 @@ body {
   overflow-y: auto;
 }
 
-
 .page h2,
 .mobile-page h2 {
   font-size: 2.2rem;
@@ -169,7 +168,6 @@ body {
   transform: scale(1.05);
   box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
 }
-
 
 .skills-page,
 .project-page,
@@ -546,6 +544,9 @@ body {
   align-items: center;
   background-color: #fff;
 }
+.skill {
+  max-height: 275px;
+}
 
 @media screen and (max-width: 1440px) {
   .badge-container,
@@ -596,7 +597,7 @@ body {
     padding: 0.7rem 1.6rem;
   }
   .project-item {
-  max-height: 350px;
+    max-height: 350px;
   }
 }
 
@@ -686,4 +687,3 @@ body {
     padding: 0.5rem 1rem;
   }
 }
-
