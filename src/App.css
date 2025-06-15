@@ -261,7 +261,7 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   overflow-y: auto;
-  max-height: 500px;
+  max-height: 65vh;
   flex: 1;
   min-height: 0;
 }
@@ -553,7 +553,7 @@ body {
   background-color: #fff;
 }
 .skill {
-  max-height: 275px;
+  max-height: 35vh;
 }
 
 @media screen and (max-width: 1440px) {
@@ -603,9 +603,6 @@ body {
   .start-button {
     font-size: 0.95rem;
     padding: 0.7rem 1.6rem;
-  }
-  .project-item {
-    max-height: 350px;
   }
 }
 
