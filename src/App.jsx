@@ -238,34 +238,126 @@ const App = () => {
           <h3>프로젝트 목록</h3>
           <ul className="toc-list glow-text">
             <li>
-              포켓몬 도감 프로젝트(개인)
+              영화웹 프로젝트(개인)
               <button onClick={() => goToPage(5)}>이동</button>
             </li>
             <li>
-              여행 웹사이트(개인)
+              포켓몬 도감 프로젝트(개인)
               <button onClick={() => goToPage(7)}>이동</button>
             </li>
             <li>
-              데스크탑 프로젝트(개인)
+              여행 웹사이트(개인)
               <button onClick={() => goToPage(9)}>이동</button>
             </li>
             <li>
-              UI/UX 프로젝트(팀)
+              데스크탑 프로젝트(개인)
               <button onClick={() => goToPage(11)}>이동</button>
             </li>
             <li>
-              JS 프로젝트(팀)
+              UI/UX 프로젝트(팀)
               <button onClick={() => goToPage(13)}>이동</button>
             </li>
             <li>
-              2048(유니티)
+              JS 프로젝트(팀)
               <button onClick={() => goToPage(15)}>이동</button>
             </li>
             <li>
+              2048(유니티)
+              <button onClick={() => goToPage(17)}>이동</button>
+            </li>
+            <li>
               벽돌깨기(유니티)
-              <button onClick={() => goToPage(16)}>이동</button>
+              <button onClick={() => goToPage(18)}>이동</button>
             </li>
           </ul>
+        </div>
+      ),
+    },
+    {
+      title: "개인 프로젝트",
+      content: (
+        <div className="project-page">
+          <ProjectSlider
+            images={[
+              "/movie.png",
+              "/movie1.png",
+              "/movie2.png",
+              "/movie3.png",
+              "/movie4.png",
+              "/movie5.png",
+            ]}
+          />
+          <div className="project-item glow-text">
+            <h3>영화웹 프로젝트</h3>
+            <div className="project-title">
+              <a href="https://dreamy-gingersnap-00b2c0.netlify.app/">
+                배포 사이트
+              </a>
+              <a href="https://github.com/Dongsusin/movie-cgv">GitHub</a>
+            </div>
+            <div className="project-Skill">
+              <h3>사용 기술</h3>
+              <div className="badge-container">
+                <span className="badge">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    alt="React"
+                  />
+                  React
+                </span>
+                <span className="badge">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JS"
+                  />
+                  JavaScript
+                </span>
+                <span className="badge">
+                  <img
+                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                    alt="GitHub"
+                  />
+                  GitHub
+                </span>
+                <span className="badge">
+                  <img
+                    src="https://seeklogo.com/images/N/netlify-logo-758722CDF4-seeklogo.com.png"
+                    alt="Netlify"
+                  />
+                  Netlify
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "주요 기능",
+      content: (
+        <div className="project-page glow-text">
+          <div className="project-item">
+            <h3>헤더</h3>
+            <p>각페이지로 전환할수있는 기능</p>
+            <h3>메인페이지</h3>
+            <p>영화 예고편을 랜덤으로 5개불러와서 티저느낌으로 랜더링하며 밑에는 영화리스트를 구현</p>
+            <h3>영화 제목 검색및 장르 검색,필터링</h3>
+            <p>
+              영화의 제목이나 장르를 이용해서 영화를 검색및 필터링 할수있는 기능
+            </p>
+            <h3>페이지 네이션</h3>
+            <p>1024이상에서는 1페이지에 20개씨 이하에서는 10개씩 정렬돼게 페이지를 나누는 기능</p>
+            <h3>상세페이지</h3>
+            <p>
+              영화 이미지를 클릭해서 상세페이지로 이동이 가능하며 상세페이지에서는 해당영화의 다양한정보와 예고편을 볼수있습니다.
+            </p>
+            <h3>예메페이지</h3>
+            <p>예메하기 버튼을 클릭해서 이동할수있으며, 실제 영화를 예메하는 느낌이나도록 구현했습니다.</p>
+            <h3>상점페이지/장바구니</h3>
+            <p>상점페이지에서 상품을 장바구니에 추가할수있으며 추가된 상품은 해더에 장바구니/수량으로 표시돼며 장바구니클릭으로 현재추가한 상품을 볼수있습니다.</p>
+            <h3>티켓페이지</h3>
+            <p>예메가 완료돼면 티켓페이지에 로컬스트리지로 티켓이 추가돼며 관리할수있습니다.</p>
+          </div>
         </div>
       ),
     },
