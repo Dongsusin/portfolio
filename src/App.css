@@ -161,7 +161,8 @@ body {
 .skills-page,
 .project-page,
 .contact-page,
-.education-page {
+.education-page,
+.mobile-page {
   padding: 1rem;
   overflow-y: hidden;
   overflow-x: hidden;
@@ -292,6 +293,7 @@ body {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
   list-style: none;
   text-decoration: none;
+  text-wrap: nowrap;
 }
 
 .project-title a:hover {
@@ -691,5 +693,8 @@ body {
   .contact-page button {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+  }
+  .project-item {
+    padding: 5px;
   }
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectSlider from "../ProjectSlider";
 import emailjs from "emailjs-com";
+import ScrollHintArrow from "../components/ScrollHintArrow";
 
 const pages = (
   goToPage,
@@ -301,6 +302,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -309,7 +311,7 @@ const pages = (
     title: "주요 기능",
     content: (
       <div className="project-page glow-text">
-        <div className="project-item">
+        <div className="project-item ">
           <h3>&bull;헤더</h3>
           <p>각페이지로 전환할수있는 기능</p>
           <h3>&bull;메인페이지</h3>
@@ -321,7 +323,7 @@ const pages = (
           <p>
             영화의 제목이나 장르를 이용해서 영화를 검색및 필터링 할수있는 기능
           </p>
-          <h3>페이지 네이션</h3>
+          <h3>&bull;페이지 네이션</h3>
           <p>
             1024이상에서는 1페이지에 20개씨 이하에서는 10개씩 정렬돼게 페이지를
             나누는 기능
@@ -347,6 +349,7 @@ const pages = (
             예메가 완료돼면 티켓페이지에 로컬스트리지로 티켓이 추가돼며
             관리할수있습니다.
           </p>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -410,6 +413,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -434,6 +438,7 @@ const pages = (
             포켓몬 카드 클릭시 상세 페이지로 이동하며 상세페이지에는
             스탯,진화정보등을 추가로 보여줌
           </p>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -504,6 +509,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -536,6 +542,7 @@ const pages = (
             선택된 여행지에 대해 날씨, 이미지, 설명, 환율 등 다양한 정보를 API를
             통해 불러와 표시
           </p>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -602,6 +609,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -651,6 +659,7 @@ const pages = (
             이용해서 구현해봤으며 테트리스,턴제카드게임등 좀더 복잡하고 어려운
             게임도 구현해봤습니다.
           </p>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -740,6 +749,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -776,6 +786,7 @@ const pages = (
             일관된 디자인 시스템으로 빠른 스타일링이 가능하며, 커스터마이징이
             용이
           </p>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -861,6 +872,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -919,6 +931,7 @@ const pages = (
 
           <h3>&bull;AI대전 모드</h3>
           <p>TS를 이용해서 만든AI와 점수를 대결하는 모드</p>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -967,6 +980,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),
@@ -1017,6 +1031,7 @@ const pages = (
               </span>
             </div>
           </div>
+          <ScrollHintArrow />
         </div>
       </div>
     ),

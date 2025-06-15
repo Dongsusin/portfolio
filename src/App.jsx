@@ -1,9 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import HTMLFlipBook from "react-pageflip";
-import emailjs from "emailjs-com";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ProjectSlider from "./ProjectSlider";
 import createPages from "./data/pages";
 import "./App.css";
 
@@ -38,7 +36,13 @@ const App = () => {
     }
   };
 
-  const pages = createPages(goToPage, isMobile, book, setCurrentIndex, setSlideDirection);
+  const pages = createPages(
+    goToPage,
+    isMobile,
+    book,
+    setCurrentIndex,
+    setSlideDirection
+  );
 
   const nextPage = () => {
     isMobile

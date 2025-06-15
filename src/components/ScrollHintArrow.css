@@ -1,0 +1,32 @@
+.scrollable-page {
+  position: relative;
+  overflow-y: auto;
+  max-height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.scroll-hint-arrow {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #4b3621;
+  background: linear-gradient(135deg, #bfa77a, #d9c9a3);
+  border-radius: 25px;
+  opacity: 0.6;
+  animation: blink 1.2s infinite;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0;
+  }
+}
